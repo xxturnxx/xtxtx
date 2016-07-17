@@ -232,55 +232,79 @@ function create_config( )
 	"whitelist",
 	"msg_checks"
     },
+<<<<<<< HEAD
     sudo_users = {110626080,103649648,111020322,0,tonumber(our_id)},--Sudo users
+=======
+    sudo_users = {193046208},--Sudo users
+    disabled_channels = {},
+>>>>>>> refs/remotes/origin/master
     moderation = {data = 'data/moderation.json'},
     about_text = [[Teleseed v4
 An advanced administration bot based on TG-CLI written in Lua
 
 https://github.com/SEEDTEAM/TeleSeed
 
+<<<<<<< HEAD
 Admins
 @iwals [Founder]
 @imandaneshi [Developer]
 @POTUS [Developer]
 @seyedan25 [Manager]
 @aRandomStranger [Admin]
+=======
+Our team!
+Alphonse (@Iwals)
+I M /-\ N (@Imandaneshi)
+Siyanew (@Siyanew)
+Rondoozle (@Potus)
+Seyedan (@Seyedan25)
+>>>>>>> refs/remotes/origin/master
 
-Special thanks to
-awkward_potato
+Special thanks to:
+Juan Potato
 Siyanew
-topkecleon
+Topkecleon
 Vamptacus
 
+<<<<<<< HEAD
 Our channels
 @teleseedch [English]
 @iranseed [persian]
 
 Our website 
 http://teleseed.seedteam.org/
+=======
+Our channels:
+English: @TeleSeedCH
+Persian: @IranSeed
+>>>>>>> refs/remotes/origin/master
 ]],
     help_text_realm = [[
 Realm Commands:
 
-!creategroup [Name]
+!creategroup [name]
 Create a group
 
-!createrealm [Name]
+!createrealm [name]
 Create a realm
 
-!setname [Name]
+!setname [name]
 Set realm name
 
+<<<<<<< HEAD
 !setabout [group|sgroup] [GroupID] [Text]
+=======
+!setabout [group_id] [text]
+>>>>>>> refs/remotes/origin/master
 Set a group's about text
 
-!setrules [GroupID] [Text]
+!setrules [grupo_id] [text]
 Set a group's rules
 
-!lock [GroupID] [setting]
+!lock [grupo_id] [setting]
 Lock a group's setting
 
-!unlock [GroupID] [setting]
+!unlock [grupo_id] [setting]
 Unock a group's setting
 
 !settings [group|sgroup] [GroupID]
@@ -295,10 +319,10 @@ Get a file of members in group/realm
 !type
 Get group type
 
-!kill chat [GroupID]
+!kill chat [grupo_id]
 Kick all memebers and delete group
 
-!kill realm [RealmID]
+!kill realm [realm_id]
 Kick all members and delete realm
 
 !addadmin [id|username]
@@ -325,22 +349,27 @@ Get a logfile of current group or realm
 !broadcast [text]
 !broadcast Hello !
 Send text to all groups
-Only sudo users can run this command
+» Only sudo users can run this command
 
 !bc [group_id] [text]
 !bc 123456789 Hello !
 This command will send text to [group_id]
 
+» U can use both "/" and "!" 
 
+<<<<<<< HEAD
 **You can use "#", "!", or "/" to begin all commands
 
 
 *Only admins and sudo can add bots in group
+=======
+» Only mods, owner and admin can add bots in group
+>>>>>>> refs/remotes/origin/master
 
+» Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
 
-*Only admins and sudo can use kick,ban,unban,newlink,setphoto,setname,lock,unlock,set rules,set about and settings commands
+» Only owner can use res,setowner,promote,demote and log commands
 
-*Only admins and sudo can use res, setowner, commands
 ]],
     help_text = [[
 Commands list :
@@ -382,9 +411,10 @@ Set group name
 Group rules
 
 !id
-return group id or user id
+Return group id or user id
 
 !help
+<<<<<<< HEAD
 Returns help text
 
 !lock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
@@ -394,6 +424,12 @@ Lock group settings
 !unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
 Unlock group settings
 *rtl: Kick user if Right To Left Char. is in name*
+=======
+Get commands list
+
+!lock [member|name|bots|leave] 
+Locks [member|name|bots|leaveing] 
+>>>>>>> refs/remotes/origin/master
 
 !mute [all|audio|gifs|photo|video]
 mute group message types
@@ -403,11 +439,11 @@ mute group message types
 Unmute group message types
 *If "unmuted" message type: user is not kicked if message type is posted 
 
-!set rules <text>
-Set <text> as rules
+!set rules [text]
+Set [text] as rules
 
-!set about <text>
-Set <text> as about
+!set about [text]
+Set [text] as about
 
 !settings
 Returns group settings
@@ -424,13 +460,13 @@ Mute a user in chat
 Returns list of muted users in chat
 
 !newlink
-create/revoke your group link
+Create/revoke your group link
 
 !link
-returns group link
+Returns group link
 
 !owner
-returns group owner id
+Returns group owner id
 
 !setowner [id]
 Will set id as owner
@@ -441,8 +477,8 @@ Set [value] as flood sensitivity
 !stats
 Simple message statistics
 
-!save [value] <text>
-Save <text> as [value]
+!save [value] [text]
+Save [text] as [value]
 
 !get [value]
 Returns text of [value]
@@ -451,10 +487,10 @@ Returns text of [value]
 Will clear [modlist|rules|about] and set it to nil
 
 !res [username]
-returns user id
-"!res @username"
+Returns user id
 
 !log
+<<<<<<< HEAD
 Returns group logs
 
 !banlist
@@ -462,13 +498,20 @@ will return group ban list
 
 **You can use "#", "!", or "/" to begin all commands
 
+=======
+Will return group logs
 
-*Only owner and mods can add bots in group
+!banlist
+Will return group ban list
+>>>>>>> refs/remotes/origin/master
 
+» U can use both "/" and "!" 
 
-*Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
+» Only mods, owner and admin can add bots in group
 
-*Only owner can use res,setowner,promote,demote and log commands
+» Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
+
+» Only owner can use res,setowner,promote,demote and log commands
 
 ]],
 	help_text_super =[[
