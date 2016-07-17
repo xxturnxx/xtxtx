@@ -6,6 +6,8 @@ cd $THIS_DIR
 update() {
   git pull
   git submodule update --init --recursive
+<<<<<<< HEAD
+=======
   install_rocks
 }
 
@@ -87,6 +89,7 @@ install_rocks() {
   RET=$?; if [ $RET -ne 0 ];
     then echo "Error. Exiting."; exit $RET;
   fi
+>>>>>>> refs/remotes/origin/master
 }
 
 install() {
@@ -105,8 +108,6 @@ install() {
     echo "Error. Exiting."; exit $RET;
   fi
   cd ..
-  install_luarocks
-  install_rocks
 }
 
 if [ "$1" = "install" ]; then
@@ -125,6 +126,6 @@ else
     echo "Run $0 install"
     exit 1
   fi
-
+  rm -r ../.telegram-cli/state #Prevent tg from crash
   ./tg/bin/telegram-cli -k ./tg/tg-server.pub -s ./bot/seedbot.lua -l 1 -E $@
 fi
